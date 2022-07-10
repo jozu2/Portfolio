@@ -1,0 +1,187 @@
+
+
+
+.container{
+  width: 1px;
+  height: 1px;
+  background-color: rgb(22, 119, 74);
+  border-radius: 50%;
+  top:  -350px;
+  left:  -350px;
+  position: fixed;
+  transition: all .25s ease-in-out;
+}
+
+.container.active{
+  width: 850px;
+  height: 850px;
+  animation: grow .25s;
+  @keyframes grow {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+  }
+ 
+}
+
+.menu-btn {
+  background-color:  rgb(22, 119, 74);
+  border-radius: 50%;
+  margin: 1em;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  z-index: 1;
+
+ 
+}
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  
+  
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+  
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+  
+}
+
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+ 
+
+      
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu{
+
+  line-height: 4.5rem;
+  top: 2.7em;
+  left: 3.3em;
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  position: fixed;
+  display: none;
+  
+}
+
+.menu.active{
+
+  display:block;
+  text-align: center;
+  -webkit-animation: fadein 1.5s;
+  animation: fadein 1.5s;
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+}
+
+
+
+
+
+
+@media only screen and (max-width:850px ) {
+  .menu-btn{
+    width: 69px;
+    height: 69px;
+  }
+  .menu-btn__burger, 
+  .menu-btn__burger::before,
+  .menu-btn__burger::after{ 
+    width: 40px;
+    height: 5px; }
+
+    .container.active{
+      width: 750px;
+      height:750px; }
+
+      .menu{
+        line-height: 3.9rem;
+        top: 2.3em;
+        left: 2.5em;   
+      }
+
+}
+  
+
+@media only screen and (max-width:550px ) {
+
+  .menu-btn__burger, 
+  .menu-btn__burger::before,
+  .menu-btn__burger::after{ 
+    width: 40px;
+    height: 3px; 
+   /* border: 3px solid #fff; */}
+
+    .container.active{
+      width: 700px;
+      height:700px; }
+      
+      .menu{
+        line-height: 3.4rem;
+        top: 1.9em;
+        left: 2em;   
+      }
+      .menu-btn{
+       background-color: transparent;
+      }
+
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

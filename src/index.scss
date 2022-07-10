@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Sahitya:wght@400;700&display=swap');
+
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+background-color: rgb(188, 233, 214);
+font-family: 'Sahitya';
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-size: 4.5rem;
+  
+ 
+}
+
+h2{
+  font-size: 2rem;
+}
+
+.main-container{
+
+  max-width: 1920px;
+  margin: auto;
+ 
+}
